@@ -47,7 +47,7 @@ int main(){
         case 3:
             resultat = 1;
             // just a comment
-            printf("\nQuel est le nombre de valeur que vous souhaitez multiplier ?");
+            printf("\nQuel est le nombre de valeurss que vous souhaitez multiplier ?");
             scanf("%d", &n);
             for (i=0; i<n; i++){
                 printf("Entrez le nombre %d : ", i+1);
