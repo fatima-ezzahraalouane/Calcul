@@ -36,7 +36,7 @@ int main(){
             break;
 
         case 2:
-            printf("\nEntrez le premier nombre : ");
+            printf("Entrez le premier nombre : ");
             scanf("%lf", &a);
             printf("Entrez le deuxieme nombre : ");
             scanf("%lf", &b);
@@ -45,9 +45,8 @@ int main(){
             break;
 
         case 3:
-            resultat = 1;
-            //test github
-            printf("\nQuel est le nombre de valeurs que vous souhaitez multiplier ? ");
+            resultat = 1.0;
+            printf("Quel est le nombre de valeurs que vous souhaitez multiplier ? ");
             scanf("%d", &n);
             for (i=0; i<n; i++){
                 printf("Entrez le nombre %d : ", i+1);
@@ -91,7 +90,7 @@ int main(){
             break;
         
         case 7: 
-            //resultat = 1.0;
+            resultat = 1.0;
             printf("Entrez la base : ");
             scanf("%lf", &a);
             printf("Entrez l'exposant : ");
