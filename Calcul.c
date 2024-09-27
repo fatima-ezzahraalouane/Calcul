@@ -8,7 +8,7 @@ int main(){
     double nombre, somme, moyenne;
 
     do {
-        printf("\n*****Menu Calculatrice*****\n");
+        printf("\n****** Menu Calculatrice ******\n");
         printf("1- Addition \n");
         printf("2- Soustraction \n");
         printf("3- Multiplication \n");
@@ -25,10 +25,10 @@ int main(){
         {
         case 1:
             somme = 0;
-            printf("Quel est le nombre de valeurs que vous souhaitez additionner ? ");
+            printf("\nQuel est le nombre de valeurs que vous souhaitez additionner ? ");
             scanf("%d", &n);
             for(i=0; i<n; i++){
-                printf("Entrez le nombre %d : ", i + 1);
+                printf("Entrez le nombre %d : ", i+1);
                 scanf("%lf", &nombre);
                 somme = somme + nombre;
             }
@@ -36,7 +36,7 @@ int main(){
             break;
 
         case 2:
-            printf("Entrez le premier nombre : ");
+            printf("\nEntrez le premier nombre : ");
             scanf("%lf", &a);
             printf("Entrez le deuxieme nombre : ");
             scanf("%lf", &b);
@@ -46,75 +46,77 @@ int main(){
 
         case 3:
             resultat = 1;
-            // just a comment
-            printf("\nQuel est le nombre de valeurss que vous souhaitez multiplier ?");
+            //test github
+            printf("\nQuel est le nombre de valeurs que vous souhaitez multiplier ? ");
             scanf("%d", &n);
             for (i=0; i<n; i++){
                 printf("Entrez le nombre %d : ", i+1);
                 scanf("%lf", &nombre);
                 resultat = resultat * nombre;
             }
-            printf("Resultat de la multiplication :%.2lf\n", resultat);
+            printf("Resultat de la multiplication est : %.2lf\n", resultat);
             break;
         
         case 4:
-            printf("Entrez le premier nombre: ");
+            printf("\nEntrez le premier nombre : ");
             scanf("%lf", &a);
-            printf("Entrez le deuxieme nombre: ");
+            printf("Entrez le deuxieme nombre : ");
             scanf("%lf", &b);
             if (b == 0) {
-                printf("Erreur: Division par zéro!\n");
+                printf("Impossible de diviser par zéro !\n");
             } else {
                 resultat = a / b;
-                printf("Résultat de la division: %.2lf\n", resultat);
+                printf("Resultat de la division est : %.2lf\n", resultat);
             }
             break;
 
         case 5:
             somme = 0;
-            printf("Quel est le nombre de valeurs que vous souhaitez entrer pour la moyenne ? ");
+            printf("\nQuel est le nombre de valeurs que vous souhaitez entrer pour la moyenne ? ");
             scanf("%d", &n);
             for (i = 0; i < n; i++) {
-                printf("Entrez le nombre %d: ", i + 1);
+                printf("Entrez le nombre %d : ", i + 1);
                 scanf("%lf", &nombre);
-                somme += nombre;
+                somme = somme + nombre;
             }
             moyenne = somme / n;
-            printf("Moyenne: %.2lf\n", moyenne);
+            printf("Resultat de la moyenne est : %.2lf\n", moyenne);
             break;
 
         case 6: 
-            printf("Entrez le nombre: ");
+            printf("Entrez le nombre : ");
             scanf("%lf", &nombre);
             resultat = fabs(nombre);
-            printf("Valeur absolue: %.2lf\n", resultat);
+            printf("Resultat de la valeur absolue est : %.2lf\n", resultat);
             break;
         
         case 7: 
-            printf("Entrez la base: ");
+            //resultat = 1.0;
+            printf("Entrez la base : ");
             scanf("%lf", &a);
-            printf("Entrez l'exposant: ");
+            printf("Entrez l'exposant : ");
             scanf("%lf", &b);
             resultat = pow(a, b);
-            printf("Résultat de l'exponentiation: %.2lf\n", resultat);
+            printf("Résultat de l'exponentiation %.2lf ^ %.2lf est : %.2lf\n", a, b, resultat);
             break;
         
         case 8: 
-            printf("Entrez un nombre positif: ");
+            
+            printf("Entrez un nombre positif : ");
             scanf("%lf", &nombre);
             if (nombre < 0) {
-                printf("Erreur: La racine carrée d'un nombre négatif n'est pas définie!\n");
+                printf("La racine carree d'un nombre negatif n'est pas definie !\n");
             } else {
                 resultat = sqrt(nombre);
-                printf("Racine carrée: %.2lf\n", resultat);
+                printf("Resultat de racine carree est : %.2lf\n", resultat);
             }
             break;
 
             case 9:
-            printf("Au revoir!\n");
+            printf("Au revoir !\n");
             break;
         default:
-            printf("Option invalide. Veuillez choisir une option valide.\n");
+            printf("Option invalide. Veuillez choisir une option valide\n");
 
         }
     }while (choix != 9);
